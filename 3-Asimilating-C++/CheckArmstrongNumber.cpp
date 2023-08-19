@@ -5,30 +5,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int checkArmstrongNumber(int n) {
-    int armstrongSum = 0, nCopy = n;
+int CheckArmStrongNumber(int n) {
+    int sum = 0, copy = n, count = 0;
 
-    while (n != 0) {
-        armstrongSum += pow(n%10, 3);
-        n /= 10;
+    while (copy != 0) {
+        copy /= 10;
+        count++;
     }
 
-    if(armstrongSum == nCopy)
+    // cout << "Number of digit => " << count << endl;
+
+    copy = n;
+
+
+    while (copy != 0) {
+        // cout << sum << " ==> " << copy%10 <<  " ==> " << pow((copy%10), count) << endl;
+        sum = sum + pow((copy%10), count);
+        // cout << "sum => " << sum << endl;
+        copy /= 10;
+    }
+
+    // cout << "Sum of the digit with power " << count << " is " << sum << endl;
+
+    if (sum == n)
         return 1;
-    else
+    else 
         return 0;
 }
 
 int main() {
     int n;
-    string res;
 
     cout << "Enter a number : ";
     cin >> n;
 
-    res = (checkArmstrongNumber(n) == 1)? "It's a Armstrong Number" : "It's not a Armstrong Number";
+    string res = (CheckArmStrongNumber(n) == 1)? " is a Armstrong Number." : " is not a Armstrong Number.";
 
-    cout << res;
+    cout << n << res << endl;
 
     return 0;
 }
