@@ -17,7 +17,6 @@ int CheckArmStrongNumber(int n) {
 
     copy = n;
 
-
     while (copy != 0) {
         // cout << sum << " ==> " << copy%10 <<  " ==> " << pow((copy%10), count) << endl;
         sum = sum + pow((copy%10), count);
