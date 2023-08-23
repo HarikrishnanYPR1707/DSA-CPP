@@ -10,5 +10,8 @@ int main() {
         cout << setw(3) << setfill('0') << pow(i, 3)  << endl;
     }
 
+    int num = 5;
+    cout << "------------------------";
+    cout << !num;
     return 0;
 }
