@@ -1,5 +1,5 @@
 /*
-    Decimal to Binary number conversion
+    Octal to Decimal number conversion
 */
 
 #include <bits/stdc++.h>
