@@ -1,5 +1,5 @@
 /*
-
+Find the number of digits of ‘n’ that evenly divide ‘n’.
 */
 
 #include <bits/stdc++.h>
@@ -14,14 +14,14 @@ int countDigits(int n){
 			count++;
 		n /= 10;
 	}
-	cout << count;
+	return count;
 }
 
 int main() {
     int n;
     cin >> n;
 
-    countDigits(n);
+    cout << countDigits(n);
 
     return 0;
 }
