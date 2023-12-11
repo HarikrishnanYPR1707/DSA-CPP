@@ -7,7 +7,10 @@ using namespace std;
 
 bool palindrome(int n)
 {
-    int digit, cp=n, rev;
+    int digit, cp=n, rev=0;
+
+    if(n < 0)
+        return false;
 
     while(n!=0){
         digit = n % 10;
