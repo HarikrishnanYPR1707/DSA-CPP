@@ -6,15 +6,21 @@
 
 using namespace std;
 
-int reverseBits(int n)
-{
-}
-
 int main()
 {
-    int n;
+    int n = 2147483647;
 
-    cout << sizeof(805306368);
+    if (n >= INT_MIN && n <= INT_MAX)
+    {
+        cout << "In the INT Range";
+    }
+    else
+    {
+        cout << "Not In the INT Range";
+    }
+
+    cout << endl
+         << INT_MIN << " < " << n << " < " << INT_MAX;
 
     return 0;
 }
