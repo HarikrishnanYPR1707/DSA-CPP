@@ -19,16 +19,16 @@ void decimal2BinaryWithArray(int n)
         i++;
     }
 
-    int num = sizeof(resultBinaryArr) / sizeof(resultBinaryArr[0]);
+    // int num = sizeof(resultBinaryArr) / sizeof(resultBinaryArr[0]);
 
-    reverse(resultBinaryArr, resultBinaryArr + num);
+    // reverse(resultBinaryArr, resultBinaryArr + num);
 
     cout << "(USING ARRAY)" << endl
          << "The resulting Binary Number is : " << endl;
 
     for (int j = 0; j < 32; j++)
     {
-        cout << resultBinaryArr[j] << " ";
+        cout << resultBinaryArr[32 - j - 1] << " ";
     }
 }
 
